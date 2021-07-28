@@ -56,8 +56,8 @@ contract RecordStudent {
             if (students[_roll].eoaaddress!=msg.sender && students[_roll].reedem==true){
                 revert();
             }
-            uint _z= amount/totalstds;
-            payable(msg.sender).transfer(_z);
+           // uint _z= amount/totalstds;
+            payable(msg.sender).transfer(1 wei);
         }
         
     }
