@@ -53,10 +53,11 @@ contract RecordStudent {
         }
         
         function reedeem(uint _roll) public{
+            require(address(this).balance >= 1);
             if (students[_roll].eoaaddress!=msg.sender && students[_roll].reedem==true){
                 revert();
             }
-           // uint _z= amount/totalstds;
+           //uint _z= amount/totalstds;
             payable(msg.sender).transfer(1 wei);
         }
         
