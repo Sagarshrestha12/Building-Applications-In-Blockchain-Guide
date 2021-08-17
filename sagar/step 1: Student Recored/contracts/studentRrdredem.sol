@@ -15,8 +15,8 @@ contract RecordStudent {
         address eoaaddress;
        // address eoaaddress;
         }
-        uint public amount;
-        uint totalstds=0;
+       // uint public amount;
+        //uint totalstds=0;
         mapping(uint=> Students) students;
         address recorder;
         
@@ -49,7 +49,7 @@ contract RecordStudent {
         
         //since an smart contract can own ether   
         function recieve() payable public{
-            amount += msg.value;
+           // amount += msg.value;
         }
         
         function reedeem(uint _roll) public{
